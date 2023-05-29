@@ -1,5 +1,9 @@
 # 花火自用GoWeb框架整合
 
+## 项目结构
+
+![image-20230529141434879](http://image.fzuhuahuo.cn/image-20230529141434879.png)
+
 ## 一.init项目
 
 ### 0.安装GO环境
