@@ -1,0 +1,63 @@
+# 花火自用GoWeb框架整合
+
+## 一.init项目
+
+### 0.安装GO环境
+
+### 1.下载gin
+
+```shell
+go get -u github.com/gin-gonic/gin
+```
+
+### 2.下载gorm mysql驱动 gorm gen
+
+```shell
+go get -u gorm.io/gorm
+go get -u gorm.io/driver/mysql
+go get -u gorm.io/gen
+```
+
+### 3.配置mysql连接
+
+> dao包下面的gorm.go，最上方的连接参数字符串改一下就可以了
+
+### 4.gorm gen 生成代码
+
+>运行gen下的main.go
+
+### 5.大功告成，可以开始使用
+
+## 二.CRUD使用方法
+
+#### 条件拼接查询
+
+```go
+func saveUser(ctx *gin.Context) {
+	//设置连接的DB,每次都需要设置一下
+	dal.SetDefault(dao.DB)
+	//设置接受的结构体
+	u := dal.User
+	//条件一
+	query := u.Where(u.Name.Eq("花火"))
+	//条件二
+	query.Where(u.Age.Eq(21))
+	//查询
+	user, err := query.Find()
+	if err != nil {
+		fmt.Print(err)
+	}
+	//返回
+	ctx.JSON(200, user)
+}
+
+```
+
+#### 分页查询
+
+```go
+userList, count, err := u.Where(u.ID.Gt(2)).Order(u.Age.Desc()).FindByPage(1, 1)
+```
+
+
+
