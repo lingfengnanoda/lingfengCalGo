@@ -30,16 +30,12 @@ go get -u gorm.io/gen
 
 >运行gen下的main.go
 
-### 5.大功告成，可以开始使用
-
 ## 二.CRUD使用方法
 
 #### 条件拼接查询
 
 ```go
 func saveUser(ctx *gin.Context) {
-	//设置连接的DB,每次都需要设置一下
-	dal.SetDefault(dao.DB)
 	//设置接受的结构体
 	u := dal.User
 	//条件一
@@ -63,5 +59,8 @@ func saveUser(ctx *gin.Context) {
 userList, count, err := u.Where(u.ID.Gt(2)).Order(u.Age.Desc()).FindByPage(1, 1)
 ```
 
+## 三.中间件
 
+- jwt权限认证
 
+### 
