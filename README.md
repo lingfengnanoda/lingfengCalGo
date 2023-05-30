@@ -1,12 +1,12 @@
-# 花火自用GoWeb框架整合
+# HuaHuoGiao
+
+> 基于gin，gorm gen的轻量级易用goweb项目整合脚手架
 
 ## 项目结构
 
 ![image-20230529141434879](http://image.fzuhuahuo.cn/image-20230529141434879.png)
 
 ## 一.init项目
-
-### 0.安装GO环境
 
 ### 1.下载gin
 
