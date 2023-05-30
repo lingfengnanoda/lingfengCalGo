@@ -1,6 +1,6 @@
 # HuaHuoGiao
 
-> 基于gin，gorm gen的轻量级易用goweb项目整合脚手架
+> 基于gin，gorm gen的轻量级易用goweb项目整合脚手架，在go语言下体验springboot+mybatisplus的懒人开发
 
 ## 项目结构
 
