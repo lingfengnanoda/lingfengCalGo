@@ -4,7 +4,7 @@
 
 ## 项目结构
 
-![image-20230529141434879](http://image.fzuhuahuo.cn/image-20230529141434879.png)
+![image-20230530211348025](http://image.fzuhuahuo.cn/image-20230530211348025.png)
 
 ## 一.init项目
 
